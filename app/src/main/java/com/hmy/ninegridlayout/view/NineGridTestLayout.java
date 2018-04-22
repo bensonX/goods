@@ -41,7 +41,7 @@ public class NineGridTestLayout extends NineGridLayout {
 
 
 
-
+        //开始修改了，修改数据中
         Glide.with(mContext).load(url).asBitmap().skipMemoryCache(false).diskCacheStrategy(DiskCacheStrategy.ALL).into(new SimpleTarget<Bitmap>() {
             @Override
             public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
