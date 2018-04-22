@@ -42,7 +42,7 @@ public class NineGridTestLayout extends NineGridLayout {
 
 
 
-        Glide.with(mContext).load(url).asBitmap().into(new SimpleTarget<Bitmap>() {
+        Glide.with(mContext).load(url).asBitmap().skipMemoryCache(false).diskCacheStrategy(DiskCacheStrategy.ALL).into(new SimpleTarget<Bitmap>() {
             @Override
             public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
 
@@ -64,7 +64,7 @@ public class NineGridTestLayout extends NineGridLayout {
                     newH = h * newW / w;
                 }
                 setOneImageLayoutParams(imageView, newW, newH);
-
+                imageView.setImageBitmap(resource);
             }
         });
 
@@ -117,8 +117,8 @@ public class NineGridTestLayout extends NineGridLayout {
     @Override
     protected void displayImage(RatioImageView imageView, String url) {
         Glide.with(mContext)
-                .load(url)
-                .into(imageView);
+                .load(url).
+        skipMemoryCache(false).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
     }
 
     @Override
