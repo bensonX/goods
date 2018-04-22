@@ -64,7 +64,7 @@ public class NineGridTestLayout extends NineGridLayout {
                     newH = h * newW / w;
                 }
                 setOneImageLayoutParams(imageView, newW, newH);
-
+                imageView.setImageBitmap(resource);
             }
         });
 
