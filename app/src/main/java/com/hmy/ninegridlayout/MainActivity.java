@@ -1,4 +1,4 @@
-package com.hmy.ninegridlayout;
+﻿package com.hmy.ninegridlayout;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         // shangxianlou 第四次修改
         //dev 代码4
         //dev 代码5
+        initData();
+        //dev 代码6
         initData();
     }
 
